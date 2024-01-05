@@ -1,6 +1,3 @@
-<?php
-include_once('partials/header.php');
-?>
 
 <title>Log In</title>
 </head>
@@ -26,6 +23,3 @@ include_once('partials/header.php');
 </form>
 
 
-<?php 
-include_once('partials/footer.php');
-?>
