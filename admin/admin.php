@@ -1,10 +1,11 @@
 <?php 
 include_once('../partials/header.php');
+session_start();
 ?>
 
 <section >
     <div class="container-md d-flex justify-content-center align-items-center" style="background-color: #D9D9D9;">
-    <form action="../process/add_song.php" method="post">
+    <form action="../process/process_add_song.php" method="post" enctype='multipart/form-data'>
       <h2>Add Song</h2>
       <div>
         <label for="artist-name">Artist</label>
@@ -17,14 +18,14 @@ include_once('../partials/header.php');
       </div>
 
       <!-- the song might not have an album, it should be connected in the process -->
-      <!-- <div>
+      <div>
         <label for="album">Album Title</label>
         <input type="text" name="albumTitle" class="border-0 rounded-pill mb-2 ms-2">
-      </div> -->
+      </div> 
 
       <div>
         <label for="sound" >Sound File</label>
-        <input type="file" accept="audio/mp3" name="sound" enctype="multipart/form-data">
+        <input type="file" name="sound" accept="audio/mp3" enctype="multipart/form-data">
       </div>
 
       <div>
