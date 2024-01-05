@@ -1,19 +1,45 @@
 <?php
 
-require_once("connexion.php");
+require_once("../utils/database.php");
+ 
 
-if(isset($_POST['pseudo']) && !empty($_POST['pseudo']));
 
-$pseudo = $_POST['pseudo'];
+if(isset($_POST['pseudo']) && !empty($_POST['pseudo'])){
 
-$request = $bdd->prepare('INSERT INTO `user`( `pseudo`) VALUES ( `:pseudo`');
+  
+
+
+$request = $db->prepare('INSERT INTO `user`(pseudo) VALUES (:pseudo)');
 $request->execute([
     
-    ':pseudo' => $pseudo,
+    
+    ':pseudo' =>$_POST['pseudo'],
+
 ]);
+}
 
-$request = $bdd->query("SELECT * FROM user");
-$pseudo =$request->fetchAll();
+// $request = $db->query("SELECT * FROM user");
+// $pseudo =$request->fetch();
 
-var_dump($_POST);
+session_start();
+
+$admin_pseudo = 'admin'; 
+
+if(($_POST['pseudo'] === $admin_pseudo)) {
+  
+    $_SESSION['admin'] = true;
+    header('Location: ../admin/admin.php');
+
+} else {
+      
+    header('Location: ../pages/homepage.php');
+}
+
+
+
+
+
+
+
+
 // header('Location:../homepage.php');
