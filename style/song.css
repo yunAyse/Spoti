@@ -15,17 +15,17 @@
     margin-top: 10px;
 }
 
-.progress {
+/* .progress {
     height: 10px;
     background-color: #ccc;
     margin-top: 10px;
-}
+} */
 
-.progress-bar {
+/* .progress-bar {
     width: 0;
     height: 100%;
     background-color: #4caf50;
-}
+} */
 
 #current-time, #total-time {
     margin-top: 10px;
