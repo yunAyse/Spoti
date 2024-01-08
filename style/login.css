@@ -54,13 +54,11 @@ body {
     align-items: center;
 }
 
-p {
+h2 {
     color:#FEFFFE; 
     display: flex; 
     justify-content: center;
     padding-top: 3%;
-    font-weight:bolder;
-    font-size:x-large;
     
 
 }

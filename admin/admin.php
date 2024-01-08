@@ -33,7 +33,7 @@ session_start();
 
       <div>
         <label for="image"> Image</label>
-        <input type="file" name="image" accept="image/png, image/jpeg,">
+        <input type="file" name="image" accept="image/png, image/jpg, image/jpeg,">
       </div>
 
       <input type="submit" value="Add Song">
