@@ -21,18 +21,18 @@ pauseButton.addEventListener('click', () => {
 });
 
 
-// playPauseButton.addEventListener("click", () => {
-//     if (isPlaying) {
-//         audio.pause();
-//         playPauseButton.textContent = "Play";
-//     } else {
-//         audio.play();
-//         playPauseButton.textContent = "Pause";
-//     }
-//     isPlaying = !isPlaying;
-// });
+playPauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+        audio.pause();
+        playPauseButton.textContent = "Play";
+    } else {
+        audio.play();
+        playPauseButton.textContent = "Pause";
+    }
+    isPlaying = !isPlaying;
+});
 
-// volumeControl.addEventListener("input", () => {
-//     audio.volume = volumeControl.value;
-// });
+volumeControl.addEventListener("input", () => {
+    audio.volume = volumeControl.value;
+});
 
