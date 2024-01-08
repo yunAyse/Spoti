@@ -2,9 +2,10 @@
     width: 400px;
     margin: 20px;
 	display:block; 
-	margin-left: auto;
+	margin-left: 600px;
 	margin-right: auto;
 	margin-top:600px;
+	
 }
 
 .controls {
@@ -30,3 +31,6 @@
     margin-top: 10px;
 }
 
+input[type=range].color {
+	color:#4caf50;
+}

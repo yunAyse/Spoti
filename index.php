@@ -27,7 +27,7 @@ require_once('../Spotify/utils/database.php');
 
 <p>Log In</p>
 
-<form class="form" action="./process/add_user.php" method="post">
+<form class="form" action="./process/process_add_user.php" method="post">
    <div class="inscris">
 <input type="text" placeholder="pseudo" name="pseudo" class="login" style="width: 300px; height: 50px;"></input>
 </div> 
@@ -39,18 +39,3 @@ require_once('../Spotify/utils/database.php');
 </form>
 
 
-<<<<<<< HEAD
-=======
-
-
-
-</section>
-    </main>
-    
-</body>
-</html>
-
-
-
-
->>>>>>> sarahBranch

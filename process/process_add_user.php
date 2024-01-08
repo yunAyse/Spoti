@@ -28,7 +28,8 @@ $admin_pseudo = 'admin';
 if(($_POST['pseudo'] === $admin_pseudo)) {
   
     $_SESSION['admin'] = true;
-    header('Location: ../admin/admin.php');
+    
+    header('Location: ../admin/admin.php'); 
 
 } else {
       
@@ -41,5 +42,3 @@ if(($_POST['pseudo'] === $admin_pseudo)) {
 
 
 
-
-// header('Location:../homepage.php');
