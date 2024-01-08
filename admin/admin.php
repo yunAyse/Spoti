@@ -1,6 +1,9 @@
 <?php 
 include_once('../partials/header.php');
+require_once('../utils/database.php');
+
 session_start();
+
 ?>
 
 <section >
