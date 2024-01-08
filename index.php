@@ -1,8 +1,3 @@
-<?php
-require_once('../Spotify/utils/database.php');
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +16,13 @@ require_once('../Spotify/utils/database.php');
     <main>
 
     <section class="logo">
-<div clas="container">
+<div class="container">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1024px-Spotify_App_Logo.svg.png" width="150px" height="150px">
 </div>
 
 <p>Log In</p>
 
-<form class="form" action="./process/add_user.php" method="post">
+<form class="form" action="./process/process_add_user.php" method="post">
    <div class="inscris">
 <input type="text" placeholder="pseudo" name="pseudo" class="login" style="width: 300px; height: 50px;"></input>
 </div> 
@@ -38,19 +33,5 @@ require_once('../Spotify/utils/database.php');
    
 </form>
 
-
-<<<<<<< HEAD
-=======
-
-
-
 </section>
-    </main>
-    
-</body>
-</html>
 
-
-
-
->>>>>>> sarahBranch

@@ -53,10 +53,11 @@ isset($_FILES['image']) && !empty($_FILES['image'])
   
 
   if ($title) {
-    $songTitles = $db -> prepare("INSERT INTO song (title, sound, album_id, artist_id) VALUES (:title, :sound ,:album_id ,:artist_id)");
+    $songTitles = $db -> prepare("INSERT INTO song (title, sound, image, album_id, artist_id) VALUES (:title, :sound ,:image, :album_id ,:artist_id)");
     $songTitles->execute([
       ':title' => $title,
       ':sound' => $soundName,
+      ':image' => $imageName,
       ':album_id' => isset($albumTitle) ? $albumTitle : null,
       ':artist_id' => isset($artistId) ? $artistId : null
     ]);
