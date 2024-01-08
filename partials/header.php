@@ -1,5 +1,5 @@
 <?php
-require_once('/laragon/www/PHP-PDO/CLONE-Spotify/utils/database.php');
+require_once('../utils/database.php');
 ?>
 
 <!DOCTYPE html>
