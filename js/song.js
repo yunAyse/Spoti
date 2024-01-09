@@ -36,3 +36,5 @@ volumeControl.addEventListener("input", () => {
     audio.volume = volumeControl.value;
 });
 
+
+let shuffle = document.querySelector('.shuffle'); 
