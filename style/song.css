@@ -1,4 +1,4 @@
-.audio-player {
+/* .audio-player {
     width: 400px;
     margin: 20px;
 	display:block; 
@@ -6,7 +6,7 @@
 	margin-right: auto;
 	margin-top:600px;
 	
-}
+} */
 
 .controls {
     display: flex;
