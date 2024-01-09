@@ -12,9 +12,9 @@ $songs = $songSelect->fetchAll();
 
 ?>
 
-<div class="container-md d-flex flex-column">
-   <div class="container d-flex justify-content-end align-items-center my-5">
-    <h1 style="color: #FFFFFF;margin-right: 10px;">Hello <?php echo $_SESSION['pseudo'] ?> !</h1>
+<div class=" d-flex flex-column">
+   <div class="d-flex justify-content-end align-items-center my-5">
+    <h1 style="color: #FFFFFF;margin-right: 10px;">Hello <?php echo $_SESSION['pseudoname']?> !</h1>
     <img src="../img/pngwing.com.png" width="70px" height="70px" class="d-flex justify-content-end">
   </div>
 
@@ -22,14 +22,16 @@ $songs = $songSelect->fetchAll();
 
     <!-- album cards -->
     <section class="container g-col-8">
-      <div class=" albums d-flex justify-content-end" style="flex-wrap: wrap;">
+      <div class="albums d-flex justify-content-end" style="flex-wrap: wrap;">
         <?php
         foreach ($songs as $song) {
 
         ?>
           <div id="album" class="d-flex flex-column m-3">
-            <div class="card" style="width: 14rem; background-color: #d9d9d9;">
-              <img src="../img/<?php echo $song['image'] ?>" class="card-img-top" style="width: 220px; height: 220px; object-fit: cover;" alt="...">
+            <div class="card" style="width: 15.5rem; background-color: #d9d9d9;">
+            <div style="width: 245px; height: 245px">
+              <img src="../img/<?php echo $song['image'] ?>" class="card-img-top" style="width: 100%; height: 100%; object-fit: cover;" alt="...">
+            </div>
               <div class="card-body">
                 <h5 class="song-title"><?php echo $song['title'] ?></h5>
                 <p class="artist-name"> <?php echo $song['name'] ?> </p>

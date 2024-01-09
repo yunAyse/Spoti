@@ -8,7 +8,7 @@ require_once('../utils/database.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPOTIFY</title>
+  <title>SPOTIFI</title>
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/style/general.css">
@@ -54,9 +54,12 @@ require_once('../utils/database.php');
       </div>
         <div class="container-md g-col-4 rounded-3 py-4 mt-2" style="background-color: #292929; height: 600px;">
           <div class="d-flex flex-column align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-collection-fill text-light" viewBox="0 0 16 16">
+            <a href="/php-pdo/CLONE-Spotify/pages/playlist.php">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-collection-fill text-light" viewBox="0 0 16 16">
               <path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1" />
             </svg>
+            </a>
+            
 
           </div>
         </div>

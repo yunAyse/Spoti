@@ -5,40 +5,42 @@ session_start();
 
 
 if (isset($_POST['pseudo']) && !empty($_POST['pseudo'])) {
-    $pseudoCheck = $db->prepare('SELECT * FROM `user` WHERE pseudo = :pseudo');
-    $pseudoCheck->execute([
-        ':pseudo' => $_POST['pseudo'],
-    ]);
-    $existingUser = $pseudoCheck->fetch();
 
-    if ($existingUser === $_SESSION['admin']) {
-        header('Location: ../admin/admin.php');
-        exit(); // Stop further execution
-    } else if ($existingUser === $_SESSION['pseudo']) {
-        header('Location: ../pages/homepage.php');
-        exit();
-    } 
+    $pseudo_name = $_POST['pseudo'];
 
-        $request = $db->prepare('INSERT INTO `user`(pseudo) VALUES (:pseudo)');
-        $request->execute([
+    $request = $db->prepare('SELECT * FROM `user` WHERE pseudo = :pseudo');
+    $request->bindValue(':pseudo', $pseudo_name);
+    $request->execute();
+    $pseudoSelects = $request->fetch();
+
+    if ($pseudoSelects) {
+        $userId = $pseudoSelects['id'];
+    } else {
+        $requestUser = $db->prepare('INSERT INTO `user`(pseudo) VALUES (:pseudo)');
+        $requestUser->execute([
             ':pseudo' => $_POST['pseudo'],
         ]);
-    
+       
         $userId = $db -> lastInsertId();
-    
-    
-        $sql = "SELECT * FROM user WHERE id = :userId ";
-        $user = $db->prepare($sql);
-        $user->execute([
-            ':userId' => $userId
-        ]);
-        $pseudoUser = $user->fetch();
+    }
+
+    $_SESSION['pseudoname'] = $pseudoSelects[1];
+    $_SESSION['pseudoid'] = $pseudoSelects[0];
+
+    // var_dump($_SESSION['pseudoname']);
+
+
+        // $sql = "SELECT * FROM user WHERE id = :userId ";
+        // $user = $db->prepare($sql);
+        // $user->execute([
+        //     ':userId' => $userId
+        // ]);
+        // $pseudoUser = $user->fetch();
     
         // var_dump($pseudoUser[1]);
-        $_SESSION['pseudo'] = $pseudoUser[1];
-    
+      
         $adminUser = 'admin';
-        if ($pseudoUser[1] === $adminUser) {
+        if ($pseudoSelects[1] === $adminUser) {
             $sqlAdmin = "SELECT * FROM user WHERE pseudo = :adminUser";
     
             $admin = $db->prepare($sqlAdmin);
