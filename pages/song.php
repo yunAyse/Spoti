@@ -55,7 +55,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <input type="hidden" name="playlist_id" value="<?php  ?>">
                     <input type="submit" value="&#43;" name="add" width="36" height="36" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16" style="border: 2px solid #fff; border-radius: 50%; background:none; color: #fff; font-weight: bold; font-size: 20px; padding: 4px 8px;" >   
                     <input type="hidden" name="user_id" value="<?php echo $_SESSION['pseudoid'] ?>">
-                    <input type="hidden" name="song_id" value="<?php echo $song['id']?>">             
+                    <input type="hidden" name="song_id" value="<?php echo $_SESSION['song']['id'] ?>">             
                 </form>
                 </div>
                 
