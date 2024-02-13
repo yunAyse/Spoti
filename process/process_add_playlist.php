@@ -64,6 +64,6 @@ var_dump($playlistId);
 
 
 
-  // header('Location: ../pages/playlist.php');
+  header('Location: ../pages/playlist.php');
 }
 ?>
